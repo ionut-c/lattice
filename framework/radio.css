@@ -1,0 +1,50 @@
+.suit-radio-wrapper {
+	font-size: 1.6rem;
+}
+.suit-radio {
+	background: #fff;
+	border: 0.16em solid #2b59df;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	height: 1em;
+	position: relative;
+	border-radius: 50%;
+	transition: 0.1s ease-in all;
+	width: 1em;
+}
+.suit-radio:after {
+	color: #fff;
+	content: "✓";
+	font-size: 0rem;
+	left: 0;
+	line-height: 0;
+	position: absolute;
+	right: 0;
+	top: 0.3em;
+	transition: 0.1s ease-in all;
+}
+.checked .suit-radio {
+	background: #2b59df;
+	overflow: hidden;
+}
+.checked .suit-radio:after {
+	color: #fff;
+	content: "✓";
+	left: 0.1em;
+	line-height: 0;
+	font-size: 0.7em;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+	top: 0.48em;
+}
+.suit-radio-label {
+	cursor: pointer;
+	font-size: 0.7em;
+	display: inline-block;
+	line-height: 1.4em;
+	margin: 0 0.5em;
+	vertical-align: top;
+}
