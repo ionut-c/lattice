@@ -10,6 +10,19 @@
 	<link href='site.css' rel='stylesheet' type='text/css'>
 	<script src="checkbox.js"></script>
 	<script src="radio.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var checkboxes = new Checkboxes();
+		var radios = new Radios();
+		$(".code").each(function() {
+			var temp = $(this).html();
+			temp = temp.replace(/="/g, "=\"<span class=\"value\">");
+			temp = temp.replace(/" /g, "</span>\" ");
+			temp = temp.replace(/"&gt;/g, "</span>\">");
+			$(this).html(temp);
+		});
+	});
+	</script>
 </head>
 <body>
 	<header>

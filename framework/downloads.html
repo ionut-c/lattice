@@ -6,20 +6,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link href='site.css' rel='stylesheet' type='text/css'>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		var checkboxes = new Checkboxes();
-		var radios = new Radios();
-		$(".code").each(function() {
-			var temp = $(this).html();
-			temp = temp.replace(/="/g, "=\"<span class=\"value\">");
-			temp = temp.replace(/" /g, "</span>\" ");
-			temp = temp.replace(/"&gt;/g, "</span>\">");
-			$(this).html(temp);
-		});
-	});
-	</script>
-	</style>
 </head>
 <body>
 	<header>
