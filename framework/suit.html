@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUIT</title>
+	<meta charset="UTF8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link href='checkbox.css' rel='stylesheet' type='text/css'>
+	<link href='radio.css' rel='stylesheet' type='text/css'>
+	<link href='site.css' rel='stylesheet' type='text/css'>
+	<script src="checkbox.js"></script>
+	<script src="radio.js"></script>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo pull-left"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="suit.html">Suit</a></li>
+				<li><a href="suit.html">Paxy</a></li>
+				<li><a href="suit.html">SASS Plate</a></li>
+				<li><a href="downloads.html">Downloads</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<h1>Checkbox</h1>
+		<div class="panel">
+			<p>SUIT offers styling for checkbox inputs</p>
+			<dl>
+				<dt>data-interface = "suit"</dt>
+				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
+				<dt>data-size = "1"</dt>
+				<dd>accepts numerical values</dd>
+				<dt>data-label = <em>empty</em></dt>
+				<dd>if sets creates a clickable label for the input</dd>
+			</dl>
+			<div class="code">
+				&lt;input type="checkbox" data-interface="suit" data-size="1" data-label="Label Here"&gt;
+			</div>
+			<input type="checkbox" data-interface="suit" data-size="1.2" data-label="Test Checkbox">
+			<input type="checkbox" checked data-interface="suit" data-label="Test Checkbox">
+			<input type="checkbox" data-size="3" data-interface="suit">
+		</div>
+		<h1>Radio</h1>
+		<div class="panel">
+			<p>SUIT offers styling for radio inputs</p>
+			<dl>
+				<dt>data-interface = "suit"</dt>
+				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
+				<dt>data-size = "1"</dt>
+				<dd>accepts numerical values</dd>
+				<dt>data-label = <em>empty</em></dt>
+				<dd>if sets creates a clickable label for the input</dd>
+				<dt>data-group = <em>empty</em></dt>
+				<dd>groups radio buttons together</dd>
+			</dl>
+			<div class="code">
+				&lt;input type="radio" data-interface="suit" data-size="1" data-label="Label Here"&gt;
+			</div>
+			<input type="radio" data-group="hello" data-label="Test Radio" data-size="1" data-interface="suit">
+			<input type="radio" checked data-group="hello" data-label="Test Radio" data-interface="suit">
+			<input type="radio" data-group="hello" data-size="3" data-interface="suit">
+		</div>
+		<h1>File Upload</h1>
+		<div class="panel">
+			TO DO
+		</div>
+	</div>
+</body>
+</html>

@@ -7,160 +7,39 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link href='checkbox.css' rel='stylesheet' type='text/css'>
 	<link href='radio.css' rel='stylesheet' type='text/css'>
+	<link href='site.css' rel='stylesheet' type='text/css'>
 	<script src="checkbox.js"></script>
 	<script src="radio.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		var checkboxes = new Checkboxes();
-		var radios = new Radios();
-		$(".code").each(function() {
-			var temp = $(this).html();
-			temp = temp.replace(/="/g, "=\"<span class=\"value\">");
-			temp = temp.replace(/" /g, "</span>\" ");
-			temp = temp.replace(/"&gt;/g, "</span>\">");
-			$(this).html(temp);
-		});
-	});
-	</script>
-	<style type="text/css">
-		body {
-			margin: 0;
-			font-size: 10px;
-			padding: 3.2rem 0.5rem;
-			color: rgba(0,0,0,.7);
-			background: #e5e5e5;
-			font-family: 'Roboto', sans-serif;
-		}
-
-		.code .value {
-			color: orange;
-		}
-
-		header {
-			background: #2b59df;
-			color: rgba(255,255,255,0.5);
-			border-bottom: 1px solid #1e47bd;
-			position: fixed;
-			left: 0;
-			right: 0;
-			top: 0;
-			z-index: 100;
-			box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
-		}
-		nav a {
-			font-size: 1rem;
-			color: rgba(255,255,255,0.5);
-			text-transform: uppercase;
-			text-decoration: none;
-			transition: 0.1s ease-in all;
-			margin: 0.5rem;
-			line-height: 3.2rem;
-		}
-		nav a:hover {
-			color: rgba(255,255,255,1);
-		}
-		.logo {
-			height: 2.2rem;
-			width: 2.2rem;
-			margin: 0.5rem;
-			background: url(suit.png) center center no-repeat;
-			background-size: cover;
-			transition: 0.1s ease-in all;
-			opacity: 0.5;
-		}
-		.logo:hover {
-			opacity: 1;
-		}
-		.pull-left {
-			float: left;
-		}
-		.pull-right {
-			float: right;
-		}
-		h1 {
-			text-transform: uppercase;
-			font-size: 2rem;
-			margin: 2rem 0;
-		}
-
-		div.panel {
-			font-size: 1.2rem;
-			background: #ddd;
-			padding: 1rem;
-			border-radius: 3px;
-			margin: 0 -0.5rem;
-		}
-		p {
-			margin: 1rem 0;
-		}
-		.code {
-			background: #fff;
-			border: 1px solid #ccc;
-			border-radius: 3px;
-			font-size: 1rem;
-			margin: 16px 0;
-			padding: 16px;
-		}
-
-		dl {
-			font-size: 1rem;
-			border-radius: 3px;
-			background: #ccc;
-			padding: 16px;
-		}
-
-		dt {
-			color: #2b59df;
-		}
-		.container {
-			max-width: 960px;
-			margin: 0 auto;
-		}
-	</style>
 </head>
 <body>
 	<header>
-		<a href="#" class="logo pull-left"></a>
+		<a href="index.html" class="logo pull-left"></a>
 		<nav>
-			<a href="#">S.U.I.T. <small>Shared User Interface Tools</small></a>
+			<ul>
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="suit.html">Suit</a></li>
+				<li><a href="suit.html">Paxy</a></li>
+				<li><a href="suit.html">SASS Plate</a></li>
+				<li><a href="downloads.html">Downloads</a></li>
+			</ul>
 		</nav>
 	</header>
 	<div class="container">
-		<h1>Checkbox</h1>
+		<h1>UI tools</h1>
 		<div class="panel">
-			<p>SUIT offers styling for checkbox inputs</p>
-			<dl>
-				<dt>data-interface = "suit"</dt>
-				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
-				<dt>data-size = "1"</dt>
-				<dd>accepts numerical values</dd>
-				<dt>data-label = <em>empty</em></dt>
-				<dd>if sets creates a clickable label for the input</dd>
-			</dl>
-			<div class="code">
-				&lt;input type="checkbox" data-interface="suit" data-size="1" data-label="Label Here"&gt;
-			</div>
-			<input type="checkbox" data-interface="suit" data-size="1.2" data-label="Test Checkbox">
-			<input type="checkbox" checked data-interface="suit" data-label="Test Checkbox">
-			<input type="checkbox" data-size="3" data-interface="suit">
+			This website is an open source collection of UI tools. Which are still being developed.
 		</div>
-		<h1>Radio</h1>
 		<div class="panel">
-			<p>SUIT offers styling for radio inputs</p>
-			<dl>
-				<dt>data-interface = "suit"</dt>
-				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
-				<dt>data-size = "1"</dt>
-				<dd>accepts numerical values</dd>
-				<dt>data-label = <em>empty</em></dt>
-				<dd>if sets creates a clickable label for the input</dd>
-			</dl>
-			<div class="code">
-				&lt;input type="radio" data-interface="suit" data-size="1" data-label="Label Here"&gt;
-			</div>
-			<input type="radio" data-group="hello" data-label="Test Radio" data-size="1" data-interface="suit">
-			<input type="radio" checked data-group="hello" data-label="Test Radio" data-interface="suit">
-			<input type="radio" data-group="hello" data-size="3" data-interface="suit">
+			<h2>SASS Plate</h2>
+			SASS plate is a variation of HTML5 Boilerplate to help you get started on a sass based project. You will need compass installed to be able to use SASS.
+		</div>
+		<div class="panel">
+			<h2>SUIT Framework</h2>
+			Get stylish Checkboxes and Radio buttons with the suit framework.
+		</div>
+		<div class="panel">
+			<h2>Paxy</h2>
+			Paxy or Parallax Y is a UI technology for animating CSS properties in response to how the user is scrolling vertically.
 		</div>
 	</div>
 </body>

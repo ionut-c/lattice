@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-size: 10px;
+  padding: 3.2rem 0.5rem;
+  color: rgba(0,0,0,.7);
+  background: #e5e5e5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.code .value {
+  color: orange;
+}
+
+.button {
+  background: #2b59df;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: 0.1s ease-in all;
+  padding: 16px 32px;
+  display: inline-block;
+  box-shadow: 0px 0px 0px rgba(0,0,0,.3);
+  border-radius: 2px;
+}
+
+.button:not(.disabled):hover {
+  color: #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,.3);
+}
+
+.button:active,
+.buttton:focus {
+  box-shadow: 0 0 0 rgba(0,0,0,.3);
+}
+
+.button.disabled {
+  background: #333;
+  opacity: .5;
+  cursor: default;
+}
+
+header {
+  background: #2b59df;
+  color: rgba(255,255,255,0.5);
+  border-bottom: 1px solid #1e47bd;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+nav a {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.1s ease-in all;
+  margin: 0.5rem;
+  line-height: 3.2rem;
+}
+nav a:hover {
+  color: rgba(255,255,255,1);
+}
+.logo {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin: 0.5rem;
+  background: url(suit.png) center center no-repeat;
+  background-size: cover;
+  transition: 0.1s ease-in all;
+  opacity: 0.5;
+}
+.logo:hover {
+  opacity: 1;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+div.panel {
+  font-size: 1.2rem;
+  background: #ddd;
+  padding: 1rem;
+  border-radius: 3px;
+  margin: 24px -0.5rem;
+}
+p {
+  margin: 1rem 0;
+}
+.code {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin: 16px 0;
+  padding: 16px;
+}
+
+dl {
+  font-size: 1rem;
+  border-radius: 3px;
+  background: #ccc;
+  padding: 16px;
+}
+
+dt {
+  color: #2b59df;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  transition: 0.1s ease-in all;
+}
+nav ul li a {
+  padding: 16px;
+  margin: 0;
+}
+nav ul li a:hover,
+nav ul li.active a {
+  color: #fff;
+  background: rgba(255,255,255,.2);
+}
