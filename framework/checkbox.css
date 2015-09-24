@@ -1,7 +1,7 @@
-.suit-checkbox-wrapper {
+.lattice-checkbox-wrapper {
 	font-size: 1.6rem;
 }
-.suit-checkbox {
+.lattice-checkbox {
 	background: #fff;
 	border: 0.16em solid #2b59df;
 	box-sizing: border-box;
@@ -13,7 +13,7 @@
 	transition: 0.1s ease-in all;
 	width: 1em;
 }
-.suit-checkbox:after {
+.lattice-checkbox:after {
 	color: #fff;
 	content: "✓";
 	font-size: 0rem;
@@ -24,11 +24,11 @@
 	top: 0.3em;
 	transition: 0.1s ease-in all;
 }
-.checked .suit-checkbox {
+.checked .lattice-checkbox {
 	background: #2b59df;
 	overflow: hidden;
 }
-.checked .suit-checkbox:after {
+.checked .lattice-checkbox:after {
 	color: #fff;
 	content: "✓";
 	left: 0.1em;
@@ -39,7 +39,7 @@
 	right: 0;
 	top: 0.48em;
 }
-.suit-checkbox-label {
+.lattice-checkbox-label {
 	cursor: pointer;
 	font-size: 0.7em;
 	display: inline-block;

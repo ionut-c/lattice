@@ -1,7 +1,7 @@
-.suit-radio-wrapper {
+.lattice-radio-wrapper {
 	font-size: 1.6rem;
 }
-.suit-radio {
+.lattice-radio {
 	background: #fff;
 	border: 0.16em solid #2b59df;
 	box-sizing: border-box;
@@ -14,7 +14,7 @@
 	transition: 0.1s ease-in all;
 	width: 1em;
 }
-.suit-radio:after {
+.lattice-radio:after {
 	color: #fff;
 	content: "✓";
 	font-size: 0rem;
@@ -25,11 +25,11 @@
 	top: 0.3em;
 	transition: 0.1s ease-in all;
 }
-.checked .suit-radio {
+.checked .lattice-radio {
 	background: #2b59df;
 	overflow: hidden;
 }
-.checked .suit-radio:after {
+.checked .lattice-radio:after {
 	color: #fff;
 	content: "✓";
 	left: 0.1em;
@@ -40,7 +40,7 @@
 	right: 0;
 	top: 0.48em;
 }
-.suit-radio-label {
+.lattice-radio-label {
 	cursor: pointer;
 	font-size: 0.7em;
 	display: inline-block;
