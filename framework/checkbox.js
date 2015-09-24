@@ -10,7 +10,13 @@ function InputTypeCheckbox() {
                 var size = "";
             }
             $(this).wrap('<div class="lattice-checkbox-wrapper" style="'+size+'"></div>');
-            $(this).parent().append('<div class="lattice-checkbox"></div>');
+
+            var classes = "lattice-checkbox";
+            if($(this).attr('disabled') != undefined || $(this).attr('readonly') != undefined) {
+                classes += " lattice-disabled";
+            }
+            $(this).parent().append('<div class="'+classes+'"></div>');
+
             if($(this).attr('checked') != undefined) {
                 $(this).parent().addClass("checked");
                 $(this).prop('checked', true);
@@ -25,12 +31,16 @@ function InputTypeCheckbox() {
 
     function attachEvents() {
         $(document).on('click', '.lattice-checkbox', function() {
-            $(this).parent().toggleClass("checked");
-            $(this).siblings("input").prop('checked', !$(this).siblings("input").prop('checked'));
+            if(!$(this).hasClass('lattice-disabled')) {
+                $(this).parent().toggleClass("checked");
+                $(this).siblings("input").prop('checked', !$(this).siblings("input").prop('checked'));
+            }
         });
         $(document).on('click', '.lattice-checkbox-label', function() {
-            $(this).parent().toggleClass("checked");
-            $(this).siblings("input").prop('checked', !$(this).siblings("input").prop('checked'));
+            if(!$(this).siblings('.lattice-disabled').length > 0) {
+                $(this).parent().toggleClass("checked");
+                $(this).siblings("input").prop('checked', !$(this).siblings("input").prop('checked'));
+            }
         });
     }
 

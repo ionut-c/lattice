@@ -10,7 +10,13 @@ function InputTypeRadio() {
                 var size = "";
             }
             $(this).wrap('<div class="lattice-radio-wrapper" data-name="'+$(this).attr("name")+'" style="'+size+'"></div>');
-            $(this).parent().append('<div class="lattice-radio"></div>');
+            
+            var classes = "lattice-radio";
+            if($(this).attr('disabled') != undefined) {
+                classes += " lattice-disabled";
+            }
+            $(this).parent().append('<div class="'+classes+'"></div>');
+            
             if($(this).attr('checked') != undefined) {
                 $(this).parent().addClass("checked");
                 $(this).prop('checked', true);
@@ -25,14 +31,18 @@ function InputTypeRadio() {
 
     function attachEvents() {
         $(document).on('click', '.lattice-radio', function() {
-            $('.lattice-radio-wrapper[data-name="'+$(this).parent().attr("data-name")+'"]').removeClass("checked");
-            $(this).parent().addClass("checked");
-            $(this).siblings("input").prop('checked', true);
+            if(!$(this).hasClass('lattice-disabled')) {
+                $('.lattice-radio-wrapper[data-name="'+$(this).parent().attr("data-name")+'"]').removeClass("checked");
+                $(this).parent().addClass("checked");
+                $(this).siblings("input").prop('checked', true);
+            }
         });
         $(document).on('click', '.lattice-radio-label', function() {
-            $('.lattice-radio-wrapper[data-name="'+$(this).parent().attr("data-name")+'"]').removeClass("checked");
-            $(this).parent().addClass("checked");
-            $(this).siblings("input").prop('checked', true);
+            if(!$(this).siblings('.lattice-disabled').length > 0) {
+                $('.lattice-radio-wrapper[data-name="'+$(this).parent().attr("data-name")+'"]').removeClass("checked");
+                $(this).parent().addClass("checked");
+                $(this).siblings("input").prop('checked', true);
+            }
         });
     }
 

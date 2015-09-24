@@ -48,3 +48,8 @@
 	margin: 0 0.5em;
 	vertical-align: top;
 }
+
+.lattice-radio-wrapper .lattice-disabled {
+	opacity: .3;
+	cursor: default;
+}

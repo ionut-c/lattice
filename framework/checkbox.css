@@ -47,3 +47,8 @@
 	margin: 0 0.5em;
 	vertical-align: top;
 }
+
+.lattice-checkbox-wrapper .lattice-disabled {
+	opacity: .3;
+	cursor: default;
+}
