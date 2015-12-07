@@ -1,0 +1,62 @@
+.lattice-toggle-wrapper {
+	font-size: 1.6rem;
+	min-height: 1.7em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.lattice-toggle-wrapper .lattice-toggle:after {
+	content: "";
+}
+.lattice-toggle-wrapper .lattice-toggle span {
+	margin-top: 0;
+	display: inline-block;
+	border: 0.16em solid #2B59DF;
+	width: 3em;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out 0s;
+}
+.lattice-toggle-wrapper:not(.checked) .lattice-toggle .checked {
+	background: #fff;
+}
+.lattice-toggle-wrapper.checked .checked,
+.lattice-toggle-wrapper .unchecked {
+	color: #fff;
+}
+.lattice-toggle-wrapper.checked .unchecked {
+	background: #fff;
+	color: rgba(0, 0, 0, 0.7);
+}
+.lattice-toggle-wrapper .lattice-disabled {
+	opacity: .3;
+	cursor: default;
+}
+
+/* transition */
+.lattice-toggle-wrapper .lattice-toggle {
+	position: relative;
+	z-index: 9;
+}
+.lattice-toggle-wrapper .lattice-toggle:after,
+.lattice-toggle-wrapper.checked .lattice-toggle:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.1s ease-in-out 0s;
+	z-index: -1;
+	background: #2B59DF;
+	width: 3.16em;
+	height: 1.4em;
+}
+.lattice-toggle-wrapper .lattice-toggle:after {
+	transform: translate(3.32em, 0);
+}
+.lattice-toggle-wrapper.checked .lattice-toggle:after {
+	transform: translate(0, 0);
+}
+/* end transition */

@@ -34,14 +34,24 @@ function InputTypeRadio() {
             if(!$(this).hasClass('lattice-disabled')) {
                 $('.lattice-radio-wrapper[data-name="'+$(this).parent().attr("data-name")+'"]').removeClass("checked");
                 $(this).parent().addClass("checked");
-                $(this).siblings("input").prop('checked', true);
+                $(this).siblings("input").click();
+                if($(this).parent().hasClass("checked")) {
+                    $(this).siblings("input").prop('checked', true);
+                } else {
+                    $(this).siblings("input").prop('checked', false);
+                }
             }
         });
         $(document).on('click', '.lattice-radio-label', function() {
             if(!$(this).siblings('.lattice-disabled').length > 0) {
                 $('.lattice-radio-wrapper[data-name="'+$(this).parent().attr("data-name")+'"]').removeClass("checked");
                 $(this).parent().addClass("checked");
-                $(this).siblings("input").prop('checked', true);
+                $(this).siblings("input").click();
+                if($(this).parent().hasClass("checked")) {
+                    $(this).siblings("input").prop('checked', true);
+                } else {
+                    $(this).siblings("input").prop('checked', false);
+                }
             }
         });
     }

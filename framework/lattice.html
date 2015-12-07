@@ -6,10 +6,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link href='checkbox.css' rel='stylesheet' type='text/css'>
+	<link href='toggle.css' rel='stylesheet' type='text/css'>
 	<link href='radio.css' rel='stylesheet' type='text/css'>
 	<link href='site.css' rel='stylesheet' type='text/css'>
 	<link href='file.css' rel='stylesheet' type='text/css'>
 	<script src="checkbox.js"></script>
+	<script src="toggle.js"></script>
 	<script src="radio.js"></script>
 	<script src="file.js"></script>
 	<script src="lattice.js"></script>
@@ -27,28 +29,30 @@
 	<div class="container">
 		<h1>Checkbox</h1>
 		<div class="panel">
-			<p>SUIT offers styling for checkbox inputs</p>
+			<p>LATTICE offers styling for checkbox inputs</p>
 			<dl>
 				<dt>data-interface = "lattice"</dt>
-				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
+				<dd>accepts <strong>lattice</strong> in order to call the lattice interface</dd>
+				<dt>data-behaviour = toggle</dt>
+				<dd>accepts <strong>toggle</strong> in order to call the checkbox</dd>
 				<dt>data-size = "1"</dt>
 				<dd>accepts numerical values</dd>
 				<dt>data-label = <em>empty</em></dt>
 				<dd>if sets creates a clickable label for the input</dd>
 			</dl>
 			<div class="code">
-				&lt;input type="checkbox" data-interface="lattice" data-size="1" data-label="Label Here"&gt;
+				&lt;input type="checkbox" data-interface="lattice" data-behaviour="checkbox" data-size="1" data-label="Label Here"&gt;
 			</div>
-			<input type="checkbox" data-interface="lattice" data-size="1.2" data-label="Test Checkbox">
-			<input type="checkbox" readonly checked data-interface="lattice" data-label="Test Checkbox">
-			<input type="checkbox" disabled data-size="3" data-interface="lattice">
+			<input type="checkbox" data-interface="lattice" data-behaviour="checkbox" data-size="1.2" data-label="Test Checkbox">
+			<input type="checkbox" readonly checked data-interface="lattice" data-behaviour="checkbox" data-label="Test Checkbox">
+			<input type="checkbox" disabled data-size="3" data-interface="lattice" data-behaviour="checkbox">
 		</div>
 		<h1>Radio</h1>
 		<div class="panel">
-			<p>SUIT offers styling for radio inputs</p>
+			<p>LATTICE offers styling for radio inputs</p>
 			<dl>
 				<dt>data-interface = "lattice"</dt>
-				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
+				<dd>accepts <strong>lattice</strong> in order to call the lattice interface</dd>
 				<dt>data-size = "1"</dt>
 				<dd>accepts numerical values</dd>
 				<dt>data-label = <em>empty</em></dt>
@@ -60,6 +64,28 @@
 			<input name="hello" disabled type="radio" data-group="hello" data-label="Test Radio" data-size="1" data-interface="lattice">
 			<input name="hello" type="radio" checked data-group="hello" data-label="Test Radio" data-interface="lattice">
 			<input name="hello" type="radio" data-group="hello" data-size="3" data-interface="lattice">
+		</div>
+		<h1>Toggle</h1>
+		<div class="panel">
+			<p>LATTICE offers styling for toggle switch</p>
+			<dl>
+				<dt>data-interface = "lattice"</dt>
+				<dd>accepts <strong>lattice</strong> in order to call the lattice interface</dd>
+				<dt>data-behaviour = toggle</dt>
+				<dd>accepts <strong>toggle</strong> in order to call the toggle switch</dd>
+				<dt>data-size = "1"</dt>
+				<dd>accepts numerical values</dd>
+				<dt>data-checked = Yes</dt>
+				<dd>accepts alphanumeric characters for the checked input</dd>
+				<dt>data-unchecked = No</dt>
+				<dd>accepts alphanumeric characters for the unchecked input</dd>
+			</dl>
+			<div class="code">
+				&lt;input type="checkbox" data-interface="lattice" data-behaviour="toggle" data-checked="Yes" data-unchecked="No" data-size="1"&gt;
+			</div>
+			<input type="checkbox" disabled data-interface="lattice" data-behaviour="toggle" data-checked="Yes" data-unchecked="No" data-size="1">
+			<input type="checkbox" data-interface="lattice" data-behaviour="toggle" data-checked="Yes" data-unchecked="No">
+			<input type="checkbox" data-interface="lattice" data-behaviour="toggle" data-checked="Yes" data-unchecked="No" data-size="3">
 		</div>
 		<h1>File Upload</h1>
 		<div class="panel">

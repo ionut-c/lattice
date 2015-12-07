@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	var inputTypeCheckbox = new InputTypeCheckbox();
+	var latticeToggle = new LatticeToggle();
 	var inputTypeRadio = new InputTypeRadio();
 	var inputTypeFile = new InputTypeFile();
 	$(".code").each(function() {
