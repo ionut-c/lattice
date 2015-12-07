@@ -8,8 +8,10 @@
 	<link href='checkbox.css' rel='stylesheet' type='text/css'>
 	<link href='radio.css' rel='stylesheet' type='text/css'>
 	<link href='site.css' rel='stylesheet' type='text/css'>
+	<link href='file.css' rel='stylesheet' type='text/css'>
 	<script src="checkbox.js"></script>
 	<script src="radio.js"></script>
+	<script src="file.js"></script>
 	<script src="lattice.js"></script>
 </head>
 <body>
@@ -61,7 +63,22 @@
 		</div>
 		<h1>File Upload</h1>
 		<div class="panel">
-			TO DO
+			<p>SUIT offers styling for file upload inputs</p>
+			<dl>
+				<dt>data-interface = "lattice"</dt>
+				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
+				<dt>data-label = <em>empty</em></dt>
+				<dd>if sets creates a clickable label for the input</dd>
+			</dl>
+			<div class="code">
+				&lt;input type="file" data-interface="lattice" data-label="Label Here"&gt;
+			</div>
+			<br />
+			<input disabled data-interface="lattice" data-label="Add file..." type="file">
+			<br />
+			<input data-interface="lattice" data-label="Add file..." type="file">
+			<br />
+			<input multiple data-interface="lattice" data-label="Add multiple files..." type="file">
 		</div>
 	</div>
 </body>
