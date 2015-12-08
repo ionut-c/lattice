@@ -60,3 +60,35 @@
 	transition: all 1s ease-in 0s;
 	font-size: 26px;
 }
+
+.lattice-file-icon-image,
+.lattice-file-icon-audio,
+.lattice-file-icon-video {
+    height: 100%;
+    width: 1em;	
+    display: inline-block;
+    width: 1.6em;
+    text-align: center;
+    border-right: 1px solid #ECECEC;
+}
+
+.lattice-file-icon-audio:after,
+.lattice-file-icon-image:after,
+.lattice-file-icon-video:after {
+	vertical-align: middle;
+	transition: all 1s ease-in 0s;
+	font-size: 1em;
+	color: #2B59DF;	
+}
+
+.lattice-file-icon-audio:after {
+	content: "♫";
+}
+
+.lattice-file-icon-image:after {
+	content: "I";
+}
+
+.lattice-file-icon-video:after {
+	content: "V";
+}

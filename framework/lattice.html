@@ -94,7 +94,9 @@
 				<dt>data-interface = "lattice"</dt>
 				<dd>accepts <strong>suit</strong> in order to call the suit interface</dd>
 				<dt>data-label = <em>empty</em></dt>
-				<dd>if sets creates a clickable label for the input</dd>
+				<dd>if sets creates a clickable label for the input</dd>				
+				<dt>accept = <em>audio/* | video/* | image/*</em></dt>
+				<dd>if the accept attr is set it creates an icon illustrating file type (audio/*, video/*, image/*)</dd>
 			</dl>
 			<div class="code">
 				&lt;input type="file" data-interface="lattice" data-label="Label Here"&gt;
@@ -105,6 +107,8 @@
 			<input data-interface="lattice" data-label="Add file..." type="file">
 			<br />
 			<input multiple data-interface="lattice" data-label="Add multiple files..." type="file">
+			<br />
+			<input accept="audio/*" data-interface="lattice" data-label="Add audio files..." type="file">
 		</div>
 	</div>
 </body>

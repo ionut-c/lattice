@@ -14,7 +14,13 @@ function InputTypeFile() {
             
             // wrapping the element 
             $(this).wrap('<div class="lattice-file-wrapper"></div>');
-            
+         
+            // adding the accept attr icon (image, audio or video)
+            if($(this).attr('accept')) {
+                var iconToBeUsed = $(this).attr('accept').replace(/[^\w\s!?]/g,'');
+                $(this).parent(".lattice-file-wrapper").prepend('<div class="lattice-file-icon-'+ iconToBeUsed +'"></div>');
+            } 
+
             // adding the label
             $(this).parent(".lattice-file-wrapper").prepend("<div class='lattice-file-button'>" + label + "</div>");
 
@@ -26,6 +32,7 @@ function InputTypeFile() {
             // hide the original input
             $(this).hide();
 
+            // emulate browse click
             $('.lattice-file-button').click(function() {
                 $(this).siblings('.lattice-file').click();
             });
