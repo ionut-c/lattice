@@ -28,7 +28,7 @@ function SameHeightComponent() {
 				if(!paused) {
 					$children.each(function() {
 						$this = $(this);
-						$this.height = parseFloat($this.height());
+						$this.height = parseFloat($this.outerHeight());
 						if($this.height > height) {
 							height = $this.height;
 						}
