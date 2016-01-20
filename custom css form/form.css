@@ -1,0 +1,80 @@
+form {
+	max-width: 400px;
+	font-size: 18px;
+	font-family: Arial;
+}
+
+fieldset {
+	border: 1px solid #000;
+	margin: 20px;
+	padding: 15px 30px;
+}
+
+
+/*Select*/
+
+form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background: url(images/arrow.png) no-repeat right 8px;
+	background-size: 32px 20px;
+	padding: 8px 45px 8px 10px;
+	border: 1px solid #2196F3;
+	color: #2196F3;
+}
+
+form select::-ms-expand {
+	display: none;
+} 
+
+/*Checkbox and radio*/
+
+form input[type=checkbox],
+form input[type=radio] {
+	width: 24px;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+}
+
+form input[type=checkbox] + label,
+form input[type=radio] + label {
+	display: inline-block;
+	margin-left: -24px;
+}
+
+form input:checked + label {
+	color: #2196F3;
+}
+
+form input[type=checkbox]:focus + label::before,
+form input[type=radio]:focus + label::before {
+	outline: #000 thin dotted;
+}
+
+form input[type=checkbox] + label::before,
+form input[type=radio] + label::before {
+	font-family: "FontAwesome";
+	margin-right: 10px;
+	display: inline-block;
+	min-width: 1em;
+}
+
+form input[type=checkbox] + label::before {
+	content: "\f096";
+}
+
+form input[type=checkbox]:checked + label::before {
+	content: "\f046";
+}
+
+form input[type=radio] + label::before {
+	content: "\f10c";
+}
+
+form input[type=radio]:checked + label::before {
+	content: "\f192";
+}
