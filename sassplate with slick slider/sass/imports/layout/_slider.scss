@@ -1,0 +1,41 @@
+.slick-slide {
+	outline: none;
+}
+
+.slider-component {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.carousel-component {
+	margin: 0 auto;
+	max-width: 1200px;
+	.slick-slide {
+		margin: 15px;
+		padding: 15px;
+		background: #fff;
+	}
+}
+
+.slick-prev::before,
+.slick-next::before,
+.slick-dots li button::before {
+	font-family: "FontAwesome";
+	font-size: 1.5rem;
+}
+
+.slick-prev::before {
+	content: "\f053";
+}
+
+.slick-next::before {
+	content: "\f054";
+}
+
+.slick-dots li button::before {
+	content: "\f10c";
+}
+
+.slick-dots li.slick-active button::before {
+	content: "\f111";
+}
