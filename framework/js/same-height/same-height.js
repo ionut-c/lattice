@@ -5,19 +5,12 @@
 
   function SameHeightComponent(options) {
     var $component = $(options.parentSelector);
-    var paused = false;
 
     function init() {
       calculateSameHeight();
       if (options.sameHeightOnResize) {
         attachEvents();
       }
-    }
-    init();
-
-    this.setPaused = function (value) {
-      paused = value;
-      calculateSameHeight();
     }
 
     function attachEvents() {
@@ -37,13 +30,18 @@
           setTimeout(resizeend, delta);
         } else {
           timeout = false;
+
           calculateSameHeight();
         }
       }
     }
 
-    function calculateSameHeight() {
+    function isWidthExcluded() {
+      return options.sameHeightOnResize && $(window).width() < options.sameHeightOnResize.maxWidthToResize &&
+        $(window).width() > options.sameHeightOnResize.minWidthToResize
+    }
 
+    function calculateSameHeight() {
       $component.each(function () {
         var $children = $(this).find(options.childrenSelector);
 
@@ -51,7 +49,7 @@
 
         $children.css('height', '');
 
-        if (paused) return;
+        if (isWidthExcluded()) return;
 
         var maxHeight = 0;
         $children.each(function () {
@@ -63,6 +61,12 @@
         maxHeight = Math.round(maxHeight * 100) / 100;
         $children.css('height', maxHeight + 'px');
       });
+    }
+
+    init()
+
+    return {
+      calculateSameHeight: calculateSameHeight
     }
   }
 }(window));

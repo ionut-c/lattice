@@ -3,8 +3,12 @@ $(window).load(function () {
     parentSelector: '.same-height-component',
     childrenSelector: '.same-height-target',
     includeMargin: true,
-    sameHeightOnResize: true
+    sameHeightOnResize: {
+      minWidthToResize: 543,
+      maxWidthToResize: 785
+    }
   };
 
-  window.SameHeightComponent(options);
+  var shComponent = window.SameHeightComponent(options);
+
 });
