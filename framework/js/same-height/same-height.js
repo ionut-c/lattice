@@ -14,31 +14,17 @@
     }
 
     function attachEvents() {
-      var rtime;
-      var timeout = false;
-      var delta = 0;
       $(window).resize(function () {
-        rtime = new Date();
-        if (timeout === false) {
-          timeout = true;
-          setTimeout(resizeend, delta);
-        }
-      });
-
-      function resizeend() {
-        if (new Date() - rtime < delta) {
-          setTimeout(resizeend, delta);
-        } else {
-          timeout = false;
-
           calculateSameHeight();
-        }
-      }
+      });
     }
 
     function isWidthExcluded() {
-      return options.sameHeightOnResize && $(window).width() < options.sameHeightOnResize.maxWidthToResize &&
-        $(window).width() > options.sameHeightOnResize.minWidthToResize
+      return options.sameHeightOnResize
+       && options.sameHeightOnResize.maxWidthToResize 
+       && options.sameHeightOnResize.minWidthToResize
+       && $(window).width() < options.sameHeightOnResize.maxWidthToResize 
+       && $(window).width() > options.sameHeightOnResize.minWidthToResize
     }
 
     function calculateSameHeight() {
@@ -53,7 +39,7 @@
 
         var maxHeight = 0;
         $children.each(function () {
-          var childHeight = $(this).outerHeight(options.includeMargin);
+          var childHeight = $(this)[0].getBoundingClientRect().height;
           if (childHeight > maxHeight) {
             maxHeight = childHeight;
           }
