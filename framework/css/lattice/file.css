@@ -1,94 +1,97 @@
 .lattice-file-wrapper {
-	position: relative;
-	border-radius: 3px;
-	overflow: hidden;
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
 }
 
 .lattice-file-button {
-	width: auto;
-	display: inline-block;
-	background: #2B59DF;
-	color: #fff;
-	padding: 0.8em 1.6em;
-	font-size: 0.7em;
-	cursor: pointer;
+    background: #2B59DF;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 0.8em 1.6em;
+    width: auto;
 }
 
 .lattice-file-button:hover {
-	background: #000;
+    background: #000;
 }
 
 .lattice-file-button.disabled {
-	background: #ccc;
+    background: #ccc;
 }
 
 .lattice-file-name {
-	border: none;
-	display: inline-block;
-	padding-left: 1.6em;
-	color: #ccc;
-	font-size: 0.7em;
-	font-style: italic;
-}
-
-.lattice-file-wrapper {
-	background: #fff;
+    border: none;
+    color: #ccc;
+    display: inline-block;
+    font-size: 0.7em;
+    font-style: italic;
+    padding-left: 1.6em;
 }
 
 .lattice-file-icon {
-	position: absolute;
-	right: 0;
-	display: inline-block;
-	height: 0;
-	transition: opacity .5s ease-out;
-	width: 2.6em;
-	background: green;
-	text-align: center;
-	color: #fff;
-	opacity: 0;
-	overflow: hidden;
+    background: green;
+    color: #fff;
+    display: inline-block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    -moz-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    transition: opacity .5s ease-out;
+    width: 2.6em;
 }
 
 .lattice-file-icon.active {
- 	opacity: 1;
-    height: 100%;	
+    height: 100%;
+    opacity: 1;
 }
 
 .lattice-file-icon:after {
-	content:"✓";
-	vertical-align: middle;
-	transition: all 1s ease-in 0s;
-	font-size: 26px;
+    content: "✓";
+    font-size: 26px;
+    -moz-transition: all 1s ease-in 0s;
+    -o-transition: all 1s ease-in 0s;
+    -webkit-transition: all 1s ease-in 0s;
+    transition: all 1s ease-in 0s;
+    vertical-align: middle;
 }
 
 .lattice-file-icon-image,
 .lattice-file-icon-audio,
 .lattice-file-icon-video {
-    height: 100%;
-    width: 1em;	
-    display: inline-block;
-    width: 1.6em;
-    text-align: center;
     border-right: 1px solid #ECECEC;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 1.6em;
+    width: 1em;
 }
 
 .lattice-file-icon-audio:after,
 .lattice-file-icon-image:after,
 .lattice-file-icon-video:after {
-	vertical-align: middle;
-	transition: all 1s ease-in 0s;
-	font-size: 1em;
-	color: #2B59DF;	
+    color: #2B59DF;
+    font-size: 1em;
+    transition: all 1s ease-in 0s;
+    vertical-align: middle;
 }
 
 .lattice-file-icon-audio:after {
-	content: "♫";
+    content: "♫";
 }
 
 .lattice-file-icon-image:after {
-	content: "I";
+    content: "I";
 }
 
 .lattice-file-icon-video:after {
-	content: "V";
+    content: "V";
 }

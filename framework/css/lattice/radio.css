@@ -2,28 +2,36 @@
 	font-size: 1.6rem;
 }
 .lattice-radio {
-	background: #fff;
-	border: 0.16em solid #2b59df;
-	box-sizing: border-box;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 1em;
-	height: 1em;
-	position: relative;
-	border-radius: 50%;
-	transition: 0.1s ease-in all;
-	width: 1em;
+    background: #fff;
+    border: 0.16em solid #2b59df;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    height: 1em;
+    position: relative;
+    border-radius: 50%;
+    -moz-transition: 0.1s ease-in all;
+    -o-transition: 0.1s ease-in all;
+    -webkit-transition: 0.1s ease-in all;
+    transition: 0.1s ease-in all;
+    width: 1em;
 }
 .lattice-radio:after {
-	color: #fff;
-	content: "✓";
-	font-size: 0rem;
-	left: 0;
-	line-height: 0;
-	position: absolute;
-	right: 0;
-	top: 0.3em;
-	transition: 0.1s ease-in all;
+    color: #fff;
+    content: "✓";
+    font-size: 0;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    top: 0.3em;
+    -moz-transition: 0.1s ease-in all;
+    -o-transition: 0.1s ease-in all;
+    -webkit-transition: 0.1s ease-in all;
+    transition: 0.1s ease-in all;
 }
 .checked .lattice-radio {
 	background: #2b59df;
@@ -50,6 +58,6 @@
 }
 
 .lattice-radio-wrapper .lattice-disabled {
-	opacity: .3;
 	cursor: default;
+	opacity: .3;
 }
