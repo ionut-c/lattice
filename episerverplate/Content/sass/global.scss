@@ -2,10 +2,10 @@
 // Main sass file used for imports
 // *************************************
 
-@import 'imports/mixins/variables';
+@import 'imports/mixins/_variables';
 
 @import 'compass/utilities/sprites';
-@import '../images/sprite/*.png';
+@import 'sprite/*.png';
 @include all-sprite-sprites;
 
 @import 'compass/css3';
