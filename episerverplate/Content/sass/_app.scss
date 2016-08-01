@@ -2,18 +2,16 @@
 This is a partial which contains all SASS files developed for the project.
 *************************************/
 
-@import "imports/vendor/_bootstrap-compiled";
+@import "imports/vendor/bootstrap/_bootstrap-compiled";
 
 @import "imports/mixins/_prefixes";
 @import "imports/mixins/_variables";
 @import "imports/mixins/_typography";
-@import "imports/mixins/_buttons";
 
+@import "imports/shared/_buttons";
 @import "imports/shared/_header";
 @import "imports/shared/_base";
 @import "imports/shared/_footer";
-
-// @import "imports/vendor/_lightgallery";
 
 // @import "imports/components/_demo";
 // @import "imports/components/_demo";
