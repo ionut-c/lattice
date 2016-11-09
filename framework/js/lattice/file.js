@@ -1,5 +1,5 @@
 function InputTypeFile() {
-    var $component = $('body').find('input:radio[data-interface="lattice"]');
+    var $component = $('body').find('input:file[data-interface="lattice"]');
 
     function render() {
         $('body').find('input:file[data-interface="lattice"]').each(function() {
