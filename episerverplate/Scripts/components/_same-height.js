@@ -1,3 +1,4 @@
+
 (function ($window) {
   'use strict';
 
@@ -17,7 +18,7 @@
         breakpoints = [751, 768, 975, 992, 1009, 1183, 1200, 1217],
         currentBreakpoint = 0;
 
-    var breakpointHit = function(breakpoint) {
+    var breakpointHit = function() {
       setTimeout(calculateSameHeight, 100);
     }
 
