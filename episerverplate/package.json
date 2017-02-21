@@ -1,0 +1,20 @@
+{
+  "name": "gulp-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "development": "gulp dev",
+    "production": "gulp prod"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*"
+  }
+}
