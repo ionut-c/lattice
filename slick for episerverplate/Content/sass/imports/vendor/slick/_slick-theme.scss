@@ -7,7 +7,7 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-font-path: "./fonts/" !default;
+$slick-font-path: "../fonts/vendor/slick/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: white !default;
@@ -31,19 +31,14 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 @function slick-font-url($url) {
-    @if function-exists(font-url) {
-        @return font-url($url);
-    }
-    @else {
-        @return url($slick-font-path + $url);
-    }
+  @return url($slick-font-path + $url);
 }
 
 /* Slider */
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("vendor/ajax-loader.gif") center center no-repeat;
+        background: #fff slick-image-url("vendor/slick/ajax-loader.gif") center center no-repeat;
     }
 }
 
