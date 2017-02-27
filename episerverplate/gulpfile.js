@@ -50,7 +50,7 @@ gulp.task('minify', ['sass'], function() {
 });
 
 // Watch .scss files for changes
-gulp.task('watch', ['browser-sync','sass'], function() {
+gulp.task('watch', ['sass'], function() {
     gulp.watch(config.inputSASS, ['sass']);
 });
 

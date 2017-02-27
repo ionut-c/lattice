@@ -4,10 +4,4 @@
 
 @import 'imports/mixins/_variables';
 
-@import 'compass/utilities/sprites';
-@import 'sprite-source/*.png';
-@include all-sprite-sprites;
-
-@import 'compass/css3';
-
 @import 'app';
