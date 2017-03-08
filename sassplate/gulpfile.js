@@ -14,10 +14,10 @@ var config = {
     sassOptions: {
         outputStyle: 'compressed'
     },
-    inputSASS: './Content/sass/**/*.scss',
-    outputSASS: './Content/css',
+    inputSASS: './sass/**/*.scss',
+    outputSASS: './css',
     outputSourceMaps: './',
-    inputMinifier: './Content/css/global.css',
+    inputMinifier: './css/global.css',
     autoprefixerOptions: {
         browsers: ['latest 2 versions']
     }

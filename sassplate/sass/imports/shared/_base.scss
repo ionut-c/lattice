@@ -5,3 +5,39 @@ html {
   // font-size: 10px;
   // height: 100%;
 }
+
+.cover-top,
+.cover-center,
+.cover-bottom {
+  object-fit: cover;
+  object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'
+}
+
+.cover-top {
+  object-position: top;
+  font-family: 'object-fit: cover; object-position: top;'
+}
+
+.cover-bottom {
+  object-position: bottom;
+  font-family: 'object-fit: cover; object-position: bottom;'
+}
+
+.contain-left,
+.contain-center,
+.contain-right {
+  object-fit: contain;
+  object-position: center;
+  font-family: 'object-fit: contain; object-position: center;'
+}
+
+.contain-left {
+  object-position: left;
+  font-family: 'object-fit: contain; object-position: left;'
+}
+
+.contain-right {
+  object-position: right;
+  font-family: 'object-fit: contain; object-position: right;'
+}
