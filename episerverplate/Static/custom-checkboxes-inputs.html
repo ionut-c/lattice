@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PictureFill Demo</title>
+    <title>Custom Checkboxes and Inputs Demo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,32 +17,54 @@
     <link rel="stylesheet" href="../Content/css/global.css">
 
     <script src="../Scripts/vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style>
+      body {
+        background: #009688;
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid">
-      <h2>PictureFill</h2>
+    <div class="container">
+      <h2>Custom checkboxes</h2>
       <div class="row">
         <div class="col-xs-12">
-          <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="../../framework/images/1x-desktop.png" media="(min-width: 992px)">
-            <source srcset="../../framework/images/1x-tablet.png" media="(min-width: 768px)">
-            <!--[if IE 9]></video><![endif]-->
-            <img srcset="../../framework/images/1x-mobile.png" class="" alt="">
-          </picture>
+          <ul class="list-unstyled">
+            <li><input type="checkbox" name="checkbox1" id="checkbox1" class="material-input" tabindex="1" /><label for="checkbox1">Request for services</label></li>
+            <li><input type="checkbox" name="checkbox2" id="checkbox2" class="material-input" tabindex="2" /><label for="checkbox2">Human resources</label></li>
+            <li><input type="checkbox" name="checkbox3" id="checkbox3" class="material-input" tabindex="3" /><label for="checkbox3">Partnership</label></li>
+          </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <pre>
             <code class="language-markup">
-&lt;picture&gt;
-  &lt;!--[if IE 9]&gt;&lt;video style="display: none;"&gt;&lt;![endif]--&gt;
-  &lt;source srcset="../../framework/images/1x-desktop.png" media="(min-width: 992px)"&gt;
-  &lt;source srcset="../../framework/images/1x-tablet.png" media="(min-width: 768px)"&gt;
-  &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
-  &lt;img srcset="../../framework/images/1x-mobile.png" class="" alt=""&gt;
-&lt;/picture&gt;
+&lt;input type="checkbox" name="checkbox1" id="checkbox1" class="material-input" tabindex="1" /&gt;&lt;label for="checkbox1"&gt;Request for services&lt;/label&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Custom inputs</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <input required tabindex="4" type="text" class="material-input" />
+          <label><span>First Name</span></label>
+          <input required tabindex="5" type="text" class="material-input" />
+          <label><span>Last Name</span></label>
+          <input required tabindex="6" type="text" class="material-input" />
+          <label><span>Title</span></label>
+          <input required tabindex="7" type="text" class="material-input" />
+          <label><span>Company</span></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <pre>
+            <code class="language-markup">
+&lt;input required tabindex="4" type="text" class="material-input" /&gt;
+&lt;label&gt;&lt;span&gt;First Name&lt;/span&gt;&lt;/label&gt;
             </code>
           </pre>
         </div>
