@@ -19,3 +19,9 @@ $(window).load(function () {
   var shComponent = window.SameHeightComponent(options);
   var shComponent2 = window.SameHeightComponent(options2);
 });
+
+// Object Fit images
+$(function () { objectFitImages('.cover-center') });
+$(function () { objectFitImages('.contain-center') });
+$(function () { objectFitImages('.cover-contain', {watchMQ: true}) }); // watchMQ: true is needed when changing object-fit propery on responsive
+// End object Fit images
