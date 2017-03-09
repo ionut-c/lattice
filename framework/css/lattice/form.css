@@ -19,7 +19,7 @@ form select {
 	-ms-appearance: none;
 	-o-appearance: none;
 	appearance: none;
-	background: url(images/arrow.png) no-repeat right 8px;
+	background: url(../../images/arrow.png) no-repeat right 8px;
 	background-size: 32px 20px;
 	padding: 8px 45px 8px 10px;
 	border: 1px solid #2196F3;
@@ -28,7 +28,7 @@ form select {
 
 form select::-ms-expand {
 	display: none;
-} 
+}
 
 /*Checkbox and radio*/
 
