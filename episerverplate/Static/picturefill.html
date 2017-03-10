@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="../Content/css/global.css">
 
     <script src="../Scripts/vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style>
+      /* fade image in after load */
+      .lazyload,
+      .lazyloading {
+          opacity: 0;
+      }
+      .lazyloaded {
+          opacity: 1;
+          transition: opacity 300ms;
+      }
+      img {
+        margin-bottom: 60px;
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
@@ -47,6 +62,117 @@
           </pre>
         </div>
       </div>
+
+      <h2>PictureFill with lazy loading</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+          	<!--[if IE 9]><video style="display: none"><![endif]-->
+          	<source data-srcset="http://lorempixel.com/1000/600/" media="(min-width: 992px)">
+          	<source data-srcset="http://placehold.it/300x300?text=tablet1" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img
+          		src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          		data-src="http://placehold.it/300x300?text=mobile1" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <pre>
+            <code class="language-markup">
+&lt;picture&gt;
+  &lt;!--[if IE 9]&gt;&lt;video style="display: none"&gt;&lt;![endif]--&gt;
+  &lt;source data-srcset="http://lorempixel.com/1000/600/" media="(min-width: 992px)"&gt;
+  &lt;source data-srcset="http://placehold.it/300x300?text=tablet1" media="(min-width: 768px)"&gt;
+  &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+  &lt;img
+    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="http://placehold.it/300x300?text=mobile1" class="lazyload" alt=""&gt;
+&lt;/picture&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+            <source	data-srcset="http://lorempixel.com/1001/600/" media="(min-width: 992px)">
+            <source	data-srcset="http://placehold.it/300x300?text=tablet2"	media="(min-width: 768px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="http://placehold.it/300x300?text=mobile2" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+            <source	data-srcset="http://lorempixel.com/1002/600/" media="(min-width: 992px)">
+            <source	data-srcset="http://placehold.it/300x300?text=tablet3"	media="(min-width: 768px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="http://placehold.it/300x300?text=mobile3" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+            <source	data-srcset="http://lorempixel.com/1003/600/" media="(min-width: 992px)">
+            <source	data-srcset="http://placehold.it/300x300?text=tablet4"	media="(min-width: 768px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="http://placehold.it/300x300?text=mobile4" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+            <source	data-srcset="http://lorempixel.com/1004/600/" media="(min-width: 992px)">
+            <source	data-srcset="http://placehold.it/300x300?text=tablet5"	media="(min-width: 768px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="http://placehold.it/300x300?text=mobile5" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+            <source	data-srcset="http://lorempixel.com/1005/600/" media="(min-width: 992px)">
+            <source	data-srcset="http://placehold.it/300x300?text=tablet6"	media="(min-width: 768px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="http://placehold.it/300x300?text=mobile6" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+            <source	data-srcset="http://lorempixel.com/1006/600/" media="(min-width: 992px)">
+            <source	data-srcset="http://placehold.it/300x300?text=tablet7"	media="(min-width: 768px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="http://placehold.it/300x300?text=mobile7" class="lazyload" alt="">
+          </picture>
+        </div>
+      </div>
     </div>
 
     <script src="../Scripts/vendor/jquery/jquery-2.2.4.min.js"></script>
@@ -54,6 +180,7 @@
     <script src="../Scripts/vendor/slick/slick.min.js"></script>
     <script src="../Scripts/vendor/object-fit-images/ofi.min.js"></script>
     <script src="../Scripts/vendor/picturefill/picturefill.min.js"></script>
+    <script src="../Scripts/vendor/lazysizes/lazysizes.min.js"></script>
 
     <!-- NO NEED TO INCLUDE PRISM IN ACTUAL PROJECT - it's just a syntax highlighter for demo -->
     <script src="../../framework/js/vendor/prism/prism.js"></script>
