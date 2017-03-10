@@ -3,6 +3,8 @@ This is a partial which contains all SASS files developed for the project.
 *************************************/
 
 @import "imports/vendor/bootstrap/_bootstrap-compiled";
+@import "imports/vendor/slick/_slick";
+@import "imports/vendor/slick/_slick-theme";
 
 @import "imports/mixins/_variables";
 
@@ -13,7 +15,7 @@ This is a partial which contains all SASS files developed for the project.
 @import "imports/shared/_footer";
 @import "imports/shared/_material-input";
 
-// @import "imports/components/_demo";
+@import "imports/components/_carousel";
 // @import "imports/components/_demo";
 
 // @import "imports/pages/_about-page";

@@ -1,0 +1,26 @@
+/*************************************
+Carousel component
+*************************************/
+
+.slick-slide {
+  outline: none;
+}
+
+.bottom-arrows {
+  .slick-prev,
+  .slick-next {
+    bottom: -2rem;
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .slick-prev {
+    left: 1.5rem;
+  }
+
+  .slick-next {
+    right: 1.5rem;
+  }
+}
