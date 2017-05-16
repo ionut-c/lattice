@@ -1,0 +1,278 @@
+<html>
+<head>
+	<style type="text/css">
+		body {
+			background: #bbb;
+		}
+		body [class*="mi-"] {
+			margin: 16px 0 0 16px; float: left;
+		}
+
+		.inverted {
+			background: #fff !important;
+		}
+		.inverted .line {
+			background: #222!important;
+		}
+
+		[class*="mi-"] {
+			background: #333;
+			font-size: 48px;
+			width: 1em;
+			height: 1em;
+			padding: .35em .3em .25em .3em;
+		}
+		[class*="mi-"] .line,
+		[class*="mi-"].reversed.hover:hover .line:first-child,
+		[class*="mi-"].reversed.morphed .line:first-child,
+		[class*="mi-"].reversed.hover:hover .line:not(:last-child):not(:first-child),
+		[class*="mi-"].reversed.morphed .line:not(:last-child):not(:first-child),
+		[class*="mi-"].reversed.hover:hover .line:last-child,
+		[class*="mi-"].reversed.morphed .line:last-child {
+			background: #fff;
+			border-radius: .1em;
+			height: .1em;
+			margin: .15em 0;
+			transform: rotate(0deg);
+			opacity: 1;
+			width: 1em;
+			-o-transition: 0.2s all ease-out;
+			-moz-transition: 0.2s all ease-out;
+			-webkit-transition: 0.2s all ease-out;
+			-ms-transition: 0.2s all ease-out;
+			transition: 0.2s all ease-out;
+		}
+		.mi-menu-to-x.hover:hover .line:first-child,
+		.mi-menu-to-x.morphed .line:first-child,
+		.mi-menu-to-x.reversed.hover:not(:hover) .line:first-child,
+		.mi-menu-to-x.reversed:not(.morphed) .line:first-child {
+			height: .15em;
+			margin-top: .4em;
+			transform: rotate(45deg);
+		}
+		.mi-menu-to-x.hover:hover .line:not(:last-child):not(:first-child),
+		.mi-menu-to-x.morphed .line:not(:last-child):not(:first-child),
+		.mi-menu-to-x.reversed.hover:not(:hover) .line:not(:last-child):not(:first-child),
+		.mi-menu-to-x.reversed:not(.morphed) .line:not(:last-child):not(:first-child) {
+			opacity: 0;
+		}
+		.mi-menu-to-x.hover:hover .line:last-child,
+		.mi-menu-to-x.morphed .line:last-child,
+		.mi-menu-to-x.reversed.hover:not(:hover) .line:last-child,
+		.mi-menu-to-x.reversed:not(.morphed) .line:last-child {
+			height: .15em;
+			margin-top: -0.55em;
+			transform: rotate(-45deg);
+		}
+
+		.mi-menu-to-back.hover:hover .line:first-child,
+		.mi-menu-to-back.morphed .line:first-child,
+		.mi-menu-to-back.reversed.hover:not(:hover) .line:first-child,
+		.mi-menu-to-back.reversed:not(.morphed) .line:first-child {
+			height: .15em;
+			margin-top: .27em;
+			margin-left: -.05em;
+			width: .5em;
+			transform: rotate(-45deg);
+		}
+		.mi-menu-to-back.hover:hover .line:not(:last-child):not(:first-child),
+		.mi-menu-to-back.morphed .line:not(:last-child):not(:first-child),
+		.mi-menu-to-back.reversed.hover:not(:hover) .line:not(:last-child):not(:first-child),
+		.mi-menu-to-back.reversed:not(.morphed) .line:not(:last-child):not(:first-child) {
+			transform: rotate(180deg);
+			margin-top: -0.17em;
+			margin-left: .1em;
+			height: .15em;
+			width: .9em;
+		}
+		.mi-menu-to-back.hover:hover .line:last-child,
+		.mi-menu-to-back.morphed .line:last-child,
+		.mi-menu-to-back.reversed.hover:not(:hover) .line:last-child,
+		.mi-menu-to-back.reversed:not(.morphed) .line:last-child {
+			height: .15em;
+			margin-top: -0.17em;
+			margin-left: -0.05em;
+			width: .5em;
+			transform: rotate(45deg);
+		}
+
+
+		.mi-back-to-forward .line:first-child,
+		.mi-back-to-forward.reversed.hover:hover .line:first-child,
+		.mi-back-to-forward.reversed.morphed .line:first-child {
+			height: .15em;
+			margin-top: .27em;
+			margin-left: -.05em;
+			width: .5em;
+			transform: rotate(-45deg);
+		}
+		.mi-back-to-forward .line:not(:last-child):not(:first-child),
+		.mi-back-to-forward.reversed.hover:hover .line:not(:last-child):not(:first-child),
+		.mi-back-to-forward.reversed.morphed .line:not(:last-child):not(:first-child) {
+			transform: rotate(180deg);
+			margin-top: -0.17em;
+			margin-left: .1em;
+			height: .15em;
+			width: .9em;
+		}
+		.mi-back-to-forward .line:last-child,
+		.mi-back-to-forward.reversed.hover:hover .line:last-child,
+		.mi-back-to-forward.reversed.morphed .line:last-child {
+			height: .15em;
+			margin-top: -0.17em;
+			margin-left: -0.05em;
+			width: .5em;
+			transform: rotate(45deg);
+		}
+		.mi-back-to-forward.hover:hover .line:first-child,
+		.mi-back-to-forward.morphed .line:first-child,
+		.mi-back-to-forward.reversed.hover:not(:hover) .line:first-child,
+		.mi-back-to-forward.reversed:not(.morphed) .line:first-child {
+			height: .15em;
+			margin-top: .27em;
+			margin-left: .57em;
+			width: .5em;
+			transform: rotate(225deg);
+		}
+		.mi-back-to-forward.hover:hover .line:not(:last-child):not(:first-child),
+		.mi-back-to-forward.morphed .line:not(:last-child):not(:first-child),
+		.mi-back-to-forward.reversed.hover:not(:hover) .line:not(:last-child):not(:first-child),
+		.mi-back-to-forward.reversed:not(.morphed) .line:not(:last-child):not(:first-child) {
+			transform: rotate(0);
+			margin-top: -0.17em;
+			margin-left: .1em;
+			height: .15em;
+			width: .9em;
+		}
+		.mi-back-to-forward.hover:hover .line:last-child,
+		.mi-back-to-forward.morphed .line:last-child,
+		.mi-back-to-forward.reversed.hover:not(:hover) .line:last-child,
+		.mi-back-to-forward.reversed:not(.morphed) .line:last-child {
+			height: .15em;
+			margin-top: -0.17em;
+			margin-left: .57em;
+			width: .5em;
+			transform: rotate(-225deg);
+		}
+
+		/*-------------------------------------------------------------------*/
+		.mi-plus-to-minus .line:first-child,
+		.mi-plus-to-minus.reversed.hover:hover .line:first-child,
+		.mi-plus-to-minus.reversed.morphed .line:first-child {
+			height: .15em;
+			margin-top: .42em;
+			margin-left: .05em;
+			width: .9em;
+			transform: rotate(90deg);
+		}
+		.mi-plus-to-minus .line:not(:last-child):not(:first-child),
+		.mi-plus-to-minus.reversed.hover:hover .line:not(:last-child):not(:first-child),
+		.mi-plus-to-minus.reversed.morphed .line:not(:last-child):not(:first-child) {
+			display: none;
+		}
+		.mi-plus-to-minus .line:last-child,
+		.mi-plus-to-minus.reversed.hover:hover .line:last-child,
+		.mi-plus-to-minus.reversed.morphed .line:last-child {
+			height: .15em;
+			margin-left: .05em;
+			width: .9em;
+			margin-top: -.29em;
+		}
+		.mi-plus-to-minus.hover:hover .line:first-child,
+		.mi-plus-to-minus.morphed .line:first-child,
+		.mi-plus-to-minus.reversed.hover:not(:hover) .line:first-child,
+		.mi-plus-to-minus.reversed:not(.morphed) .line:first-child {
+			transform: rotate(180deg);
+		}
+		.mi-plus-to-minus.hover:hover .line:last-child,
+		.mi-plus-to-minus.morphed .line:last-child,
+		.mi-plus-to-minus.reversed.hover:not(:hover) .line:last-child,
+		.mi-plus-to-minus.reversed:not(.morphed) .line:last-child {
+			transform: rotate(180deg);
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="mi-menu-to-x hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-x hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-x inverted hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-x inverted hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-back hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-back hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-back inverted hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-menu-to-back inverted hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-back-to-forward hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-back-to-forward hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-back-to-forward inverted hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-back-to-forward inverted hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-plus-to-minus hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-plus-to-minus hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-plus-to-minus inverted hover">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="mi-plus-to-minus inverted hover reversed">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+</body>
+</html>
